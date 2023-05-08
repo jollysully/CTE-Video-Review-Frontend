@@ -56,6 +56,7 @@ export default function LiveSearch({
     setFocusedIndex(nextCount);
   };
 
+  //cpmmonm input from theme.js
   const getInputStyle = () => {
     return inputStyle
       ? inputStyle

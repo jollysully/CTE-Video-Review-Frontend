@@ -33,7 +33,7 @@ export default function NotificationProvider({ children }) {
 
     timeoutId = setTimeout(() => {
       setNotification("");
-    }, 3000);
+    }, 4000);
   };
 
   return (

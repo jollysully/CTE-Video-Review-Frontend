@@ -14,7 +14,8 @@ const MoviesProvider = ({ children }) => {
 
   const { updateNotification } = useNotification();
 
-  const fetchLatestUploads = async (qty = 5) => {
+  //latestuploads admin dashboard 
+  const fetchLatestUploads = async (qty = 8) => {
     const { error, movies } = await getMovies(0, qty);
     if (error) return updateNotification("error", error);
 

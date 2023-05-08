@@ -110,6 +110,7 @@ export const searchMovieForAdmin = async (title) => {
   }
 };
 
+//movies that feed back to user UI & home.jsx
 export const getTopRatedMovies = async (type, signal) => {
   try {
     let endpoint = "/movie/top-rated";

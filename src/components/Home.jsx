@@ -2,11 +2,11 @@ import React from "react";
 import Container from "./Container";
 import HeroSlideshow from "./user/HeroSlideShow";
 import NotVerified from "./user/NotVerified";
-import TopRatedMovies from "./user/TopRatedMovies";
-import TopRatedTVSeries from "./user/TopRatedTVSeries";
-import TopRatedWebSeries from "./user/TopRatedWebSeries";
-import TopRatedRelatedVideos from "./user/TopRatedRelatedVideos";
-import SubjectMatterExpert from "./user/TopRatedSubjectMatterExpert";
+
+import FilmTv from "./user/FilmTv";
+import RelatedVideos from "./user/RelatedVideos";
+import SubjectMatterExpert from "./user/SubjectMatterExpert";
+import ReturnToPlay from "./user/ReturnToPlay";
 
 
 
@@ -15,16 +15,14 @@ export default function Home() {
     <div className="dark:bg-primary bg-white min-h-screen">
       <Container className="px-2 xl:p-0">
         <NotVerified />
-        {/* slider */}
+        {/* slideshow at Top */}
         <HeroSlideshow />
-        {/* Most rated movies */}
+        {/* Each rendered to UI  */}
         <div className="space-y-3 py-8">
-          <TopRatedWebSeries />
-          <SubjectMatterExpert />                   
-          <TopRatedRelatedVideos />
-          <TopRatedMovies />
-          <TopRatedTVSeries />
-                   
+          <ReturnToPlay />
+          <SubjectMatterExpert />                           
+          <RelatedVideos />
+          <FilmTv />                  
         </div>
       </Container>
     </div>

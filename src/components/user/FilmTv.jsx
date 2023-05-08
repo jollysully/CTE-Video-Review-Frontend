@@ -4,7 +4,7 @@ import { useNotification } from "../../hooks";
 import GridContainer from "../GridContainer";
 import MovieList from "./MovieList";
 
-export default function TopRatedMovies() {
+export default function FilmTv() {
   const [movies, setMovies] = useState([]);
   const { updateNotification } = useNotification();
 
@@ -14,6 +14,7 @@ export default function TopRatedMovies() {
 
     setMovies([...movies]);
   };
+  
   //allows you to abort one or more Web requests as and when desired. 
 
   useEffect(() => {
@@ -25,5 +26,5 @@ export default function TopRatedMovies() {
     };
   }, []);
 
-  return <MovieList movies={movies} title="Movies & TV" />;
+  return <MovieList movies={movies} title="Film & TV" />;
 }

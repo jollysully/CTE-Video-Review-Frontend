@@ -16,6 +16,7 @@ export const getAppInfo = async () => {
   }
 };
 
+//helper.js in th backend sets number amount
 export const getMostRatedMovies = async () => {
   try {
     const token = getToken();

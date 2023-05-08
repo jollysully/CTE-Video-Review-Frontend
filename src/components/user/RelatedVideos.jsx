@@ -5,17 +5,19 @@ import { useNotification } from "../../hooks";
 import GridContainer from "../GridContainer";
 import MovieList from "./MovieList";
 
-export default function TopRatedWebSeries() {
+export default function RelatedVideos() {
   const [movies, setMovies] = useState([]);
   const { updateNotification } = useNotification();
 
+  //gets doc videos from db which is selected fro drop down
   const fetchMovies = async (signal) => {
-    const { error, movies } = await getTopRatedMovies("Web Series", signal);
+    const { error, movies } = await getTopRatedMovies("Related Videos", signal);
     if (error) return updateNotification("error", error);
 
     setMovies([...movies]);
   };
 
+  //built in api to abort requests
   useEffect(() => {
     const ac = new AbortController();
     fetchMovies(ac.signal);
@@ -24,5 +26,5 @@ export default function TopRatedWebSeries() {
     };
   }, []);
 
-  return <MovieList movies={movies} title="Return to Play Protocols" />;
+  return <MovieList movies={movies} title="Related Videos" />;
 }
